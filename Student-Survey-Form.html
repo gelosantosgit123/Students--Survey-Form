@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Survey Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1 id="title">Student Survey Form</h1>
+  <p id="description"><i>Take time in answering this survey form.</i></p>
+  <form method="post" action="https://script.google.com/macros/s/AKfycbyXLY44afOToED3rjB78vIjRx7c05jdFTDHUmyjCfxuCQOtU9cgjLIPSteXPLq839KQvg/exec" id="survey-form"> 
+    <div class="container">
+      <fieldset>
+      <label for="name" id="name-label">Name</label>
+      <input id="name" type="text" name="name" required placeholder="Enter your name">
+
+      <label for="email" id="email-label">Email</label>
+      <input id="email" type="email" name="email" required placeholder="Enter your email">
+
+      <label for="age" id="age-label">Age <small>(optional)</small></label>
+      <input id="age" type="number" name="age" required placeholder="14+" min="14" max="25">
+
+      <label for="number" id="number-label">Contact Number <small>(required)</small></label>
+      <input id="number" type="tel" name="number" required placeholder="0912-345-6789" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}">
+      <small>Format: 0912-345-6789</small>
+      <br></br>
+
+      <label for="dropdown-jhs">What is your current grade level? (JHS)</label>
+      <select id="dropdown-jhs" name="grade-jhs">
+        <option value="SHS">(select one)</option>
+        <option value="Grade 7">Grade 7</option>
+        <option value="Grade 8">Grade 8</option>
+        <option value="Grade 9">Grade 9</option>
+        <option value="Grade 10">Grade 10</option>
+      </select>
+
+      <label for="dropdown-shs">What is your current grade level? (SHS)</label>
+      <select id="dropdown-shs" name="grade-shs">
+        <option value="JHS">(select one)</option>
+        <option value="Grade 11">Grade 11</option>
+        <option value="Grade 12">Grade 12</option>
+      </select>
+      <br></br>
+
+      <label id="grade-ave">What is your GWA? <small>(required)</small></label>
+      <input class="inline" id="rad1" type="radio" name="gwa" value="98-100" checked> <label for="98-100">98-100</label><br>
+      <input class="inline" id="rad2" type="radio" name="gwa" value="95-97"> <label for="95-97">95-97</label><br>
+      <input class="inline" id="rad3" type="radio" name="gwa" value="90-94"> <label for="90-94">90-94</label><br>
+      <input class="inline" id="rad4" type="radio" name="gwa" value="75-89"> <label for="75-89">75-89</label><br></br>
+
+      <label for="dropdown-acad">Which option best describes you as a student?</label>
+      <select id="dropdown-acad" name="student-traits">
+        <option value="did not specify">(select one)</option>
+        <option value="Hardworking">Hardworking</option>
+        <option value="Curious">Curious</option>
+        <option value="Disciplined">Disciplined</option>
+        <option value="Organized">Organized</option>
+        <option value="Motivated">Motivated</option>
+        <option value="Creative">Creative</option>
+        <option value="Resilient">Resilient</option>
+        <option value="Collaborative">Collaborative</option>
+        <option value="Determined">Determined</option>
+        <option value="Adaptable">Adaptable</option>
+      </select>
+<br></br>
+      <label for="checkbox">What academic challenges do you commonly face? <small>(Check all that apply)</small></label>
+      <div class="inline"><input value="Time Management" class="inline" type="checkbox" id="tm" name="tm" checked>
+      <label for="tm">Time management</label></div><br>
+      <div class="inline"><input value="Understanding course material" class="inline" type="checkbox" id="ucm" name="ucm">
+      <label for="ucm">Understanding course material</label></div><br>
+      <div class="inline"><input value="Lack of motivation" class="inline" type="checkbox" id="lom" name="lom">
+      <label for="lom">Lack of motivation</label></div><br>
+      <div class="inline"><input value="Exam anxiety" class="inline" type="checkbox" id="exanx" name="exanx">
+      <label for="exanx">Exam anxiety</label></div><br>
+      <div class="inline"><input value="Balancing Acads Extra" class="inline" type="checkbox" id="bacex" name="bacex">
+      <label for="bacex">Balancing academics and extracurriculars</label></div><br>
+      <div class="inline"><input value="Group coordination" class="inline" type="checkbox" id="grprjct" name="grprjct">
+      <label for="grprjct">Group project coordination</label></div><br>
+      <div class="inline"><input value="Resource access" class="inline" type="checkbox" id="access" name="access">
+      <label for="access">Access to resources (e.g., books, internet)</label></div><br>
+      <div class="inline"><input value="Meeting deadlines" class="inline" type="checkbox" id="deadlines" name="deadlines">
+      <label for="deadlines">Meeting deadlines</label></div><br>
+      <div class="inline"><input value="Class participation" class="inline" type="checkbox" id="discussions" name="discussions">
+      <label for="discussions">Participation in class discussions</label></div><br>
+      <div class="inline"><input value="Maintaining focus" class="inline" type="checkbox" id="focus" name="focus">
+      <label for="focus">Maintaining focus during lectures</label></div><br>
+      <div class="inline"><input value="Others" class="inline" type="checkbox" id="others" name="others">
+      <label for="others">Others <small>(please specify)</small></label></div><br>
+      <textarea id="specify" name="specify" rows="3" cols="11" placeholder="What OTHER academic challenges do you commonly face?"></textarea><br></br>
+
+      <label for="suggestions">Any comments or suggestions?</label>
+      <textarea id="suggestions" name="suggestions" rows="5" cols="33" placeholder="Enter your comments here..."></textarea>
+      <input id="submit" type="submit"></input>
+    </fieldset>
+    </div>
+  </form>
+</body>
+</html>
